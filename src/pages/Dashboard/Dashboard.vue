@@ -15,6 +15,9 @@
         </h5>
         <b-row>
           <b-col  cols="6">
+            <TotalRevenue />
+          </b-col>
+          <b-col  cols="6">
             <ColumnChart />
           </b-col>
           <b-col cols="6">
@@ -22,6 +25,9 @@
           </b-col>
           <b-col cols="6">
             <AreaChart />
+          </b-col>
+          <b-col cols="6">
+            <ComboChart />
           </b-col>
         </b-row>
       </b-col>
@@ -35,11 +41,13 @@
   import ColumnChart from '@/components/ColumnChart';
   import LineChart from '@/components/LineChart';
   import AreaChart from '@/components/AreaChart';
+  import ComboChart from '@/components/ComboChart';
+  import TotalRevenue from '@/components/TotalRevenue';
   import Users from '@/components/Users';
 
   export default {
     name: 'Dashboard',
-    components: {Header, SideNav, ColumnChart, Users, LineChart, AreaChart}
+    components: {Header, SideNav, ColumnChart, Users, LineChart, AreaChart,ComboChart,TotalRevenue}
   }
 </script>
 
