@@ -6,7 +6,14 @@
         </b-col>
         <b-col lg="11" xs="12">
           <Header />
-          1 of 3
+          <h5 class="text-left">
+            Users:
+          </h5>
+          <Users />
+          <h5 class="text-left">
+            Charts:
+          </h5>
+          <ColumnChart />
         </b-col>
       </b-row>
   </div>
@@ -15,9 +22,12 @@
 <script>
   import Header from '@/components/Header';
   import SideNav from '@/components/SideNav';
+  import ColumnChart from '@/components/ColumnChart';
+  import Users from '@/components/Users';
+
   export default {
     name: 'Dashboard',
-    components: {Header}
+    components: {Header, SideNav, ColumnChart, Users}
   }
 </script>
 
