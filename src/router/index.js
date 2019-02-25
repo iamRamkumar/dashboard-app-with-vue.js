@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import DashBoard from '@/pages/Dashboard/Dashboard'
 import Charts from '@/pages/Charts/Charts'
-import Users from '@/pages/Users/Users'
+import UsersPage from '@/pages/UsersPage/UsersPage'
 
 Vue.use(Router)
 
@@ -26,8 +26,8 @@ export default new Router({
     },
     {
       path: '/users',
-      name: 'Users',
-      component: Users
+      name: 'UsersPage',
+      component: UsersPage
     }
   ]
 })
