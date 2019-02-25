@@ -2,12 +2,12 @@
   <div>
     <b-row>
       <b-col>
-        <h4 class="text-left mx-2">Column Chart:</h4>
+        <h4 class="text-left mx-2">Area Chart:</h4>
       </b-col>
       <div class="w-100"></div>
       <b-col>
         <GChart
-          type="ColumnChart"
+          type="AreaChart"
           :data="chartData"
           :options="chartOptions"
         />
@@ -15,34 +15,35 @@
     </b-row>
 
   </div>
-
 </template>
 
 <script>
   import { GChart } from 'vue-google-charts';
 
   export default {
-    name: 'ColumnChart',
-    components: {
-      GChart
-    },
-      data: function() {
+    name: 'AreaChart',
+    components:{ GChart },
+    data: function() {
       return {
         chartData: [
-          ['Year', 'Sales', 'Expenses', 'Profit'],
-          ['2014', 1000, 400, 200],
-          ['2015', 1170, 460, 250],
-          ['2016', 660, 1120, 300],
-          ['2017', 1030, 540, 350],
-          ['2018', 1130, 1540, 1350]
+          ['Year', 'Sales', 'Expenses'],
+          ['2013',  1000, 400],
+          ['2014',  1170, 460],
+          ['2015',  2660, 1120],
+          ['2017',  1555, 2999],
+          ['2018',  660, 1120],
+          ['2019',  1660, 1120],
+          ['2016',  300, 540]
         ],
         chartOptions: {
           chart: {
             title: 'Company Performance',
-            subtitle: 'Sales, Expenses, and Profit: 2014-2018'
           },
+          hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0},
           legend: { position: 'bottom' }
         }
+
       }
     }
   }
