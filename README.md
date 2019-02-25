@@ -1,6 +1,6 @@
 # dashboard-app
 
-> A Vue.js project
+> A Vue.js Dashboard project with Google Chart integrtion.
 
 ## Build Setup
 
