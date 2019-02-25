@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <!--<img src="./assets/logo.png">-->
+    <!--<b-container class="bv-example-row">-->
     <router-view/>
+    <!--</b-container>-->
   </div>
 </template>
 
