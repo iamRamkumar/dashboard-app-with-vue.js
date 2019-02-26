@@ -1,19 +1,11 @@
 <template>
   <div>
-    <b-row>
-      <b-col>
-        <h4 class="text-left mx-2">Bar Chart:</h4>
-      </b-col>
-      <div class="w-100"></div>
-      <b-col>
-        <GChart
-          type="ComboChart"
-          :data="chartData"
-          :options="chartOptions"
-        />
-      </b-col>
-    </b-row>
-
+    <h4 class="text-left mx-2">Combo Chart:</h4>
+    <GChart
+      type="ComboChart"
+      :data="chartData"
+      :options="chartOptions"
+    />
   </div>
 </template>
 
@@ -26,21 +18,28 @@ export default {
   data: function () {
     return {
       chartData: [
-        ['Client', 'B2B', 'B2C'],
-        ['Malindo Air', 1000, 400],
-        ['Thai Lion Air', 1170, 460],
-        ['Lion Air', 2660, 1120],
-        ['Bangkok Air', 1555, 2999],
-        ['Batik Air', 660, 1120]
+        ['Name', '1-B2B', '1-B2C', '2-B2B', '2-B2C'],
+        ['Malindo Air', 1000, 400, 1050, 450],
+        ['Thai Lion Air', 1270, 460, 1170, 560],
+        ['Lion Air', 2660, 1120, 2960, 1120],
+        ['Bangkok Air', 1555, 299, 1555, 500],
+        ['Batik Air', 660, 1120, 660, 1120]
       ],
       chartOptions: {
         chart: { title: 'Company Performance' },
-        bars: 'horizontal',
-        colors: ['#1b9e77', '#d95f02', '#7570b3'],
-        vAxis: { title: 'Some Attrib', titleTextStyle: {color: '#333'} },
-        hAxis: { title: 'Client', titleTextStyle: {color: '#ddd'} },
+        colors: ['#1b9e77', '#d95f02', '#7570b3', '#EFC535'],
+        hAxis: {
+          textStyle: { color: 'black  ' }
+        },
+        vAxis: {
+          gridlines: {
+            color: 'transparent'
+          },
+          textStyle: { color: 'black' }
+        },
         seriesType: 'bars',
-        legend: { position: 'bottom' }
+        backgroundColor: 'transparent',
+        legend: { position: 'right', textStyle: { color: 'black' } }
       }
     }
   }

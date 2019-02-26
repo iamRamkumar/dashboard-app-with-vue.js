@@ -1,18 +1,18 @@
 <template>
   <!--<div>-->
   <b-nav pills>
-    <b-nav-item active>Active</b-nav-item>
-    <b-nav-item>Comp 1</b-nav-item>
-    <b-nav-item>Comp 2</b-nav-item>
-    <b-nav-item>Comp 3</b-nav-item>
+    <b-nav-item active>Client Info</b-nav-item>
+    <b-nav-item>Revenue</b-nav-item>
+    <b-nav-item>Table</b-nav-item>
+    <b-nav-item>Charts</b-nav-item>
   </b-nav>
   <!--</div>-->
 </template>
 
 <script>
-  export default {
-    name: 'SideNav'
-  }
+export default {
+  name: 'SideNav'
+}
 </script>
 
 <style scoped>

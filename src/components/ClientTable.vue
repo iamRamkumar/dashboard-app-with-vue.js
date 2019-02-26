@@ -87,5 +87,7 @@ export default {
 </script>
 
 <style scoped>
-
+.vgt-row-header {
+  color: #000000;
+}
 </style>

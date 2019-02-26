@@ -2,7 +2,6 @@
   <div>
     <b-navbar toggleable="lg" type="dark" variant="info">
       <b-navbar-toggle target="nav_collapse" />
-
       <b-navbar-brand href="#">Project Name</b-navbar-brand>
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav class="ml-auto">
