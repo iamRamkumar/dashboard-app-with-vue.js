@@ -15,11 +15,11 @@
 </template>
 
 <script>
-  import Users from '@/components/Users';
-  export default {
-    name: 'UsersPage',
-    components: {Users}
-  }
+import Users from '@/components/Users'
+export default {
+  name: 'UsersPage',
+  components: {Users}
+}
 </script>
 
 <style scoped>

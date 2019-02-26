@@ -19,31 +19,29 @@
 </template>
 
 <script>
-  import { GChart } from 'vue-google-charts';
+import { GChart } from 'vue-google-charts'
 
-  export default {
-    name: 'LineChart',
-    components:{ GChart },
-    data: function() {
-      return {
-        chartData: [
-          ['Year', 'Sales', 'Expenses'],
-          ['2004',  1000, 400],
-          ['2005',  1170, 460],
-          ['2006',  660,  1120],
-          ['2007',  1030, 540]
-        ],
-        chartOptions: {
-          chart: {
-            title: 'Company Performance',
-          },
-          curveType: 'function',
-          legend: { position: 'bottom' }
-        }
-
+export default {
+  name: 'LineChart',
+  components: { GChart },
+  data: function () {
+    return {
+      chartData: [
+        ['Year', 'Sales', 'Expenses'],
+        ['2004', 1000, 400],
+        ['2005', 1170, 460],
+        ['2006', 660, 1120],
+        ['2007', 1030, 540]
+      ],
+      chartOptions: {
+        chart: { title: 'Company Performance' },
+        curveType: 'function',
+        legend: { position: 'bottom' }
       }
+
     }
   }
+}
 </script>
 
 <style scoped>

@@ -27,13 +27,13 @@
 </template>
 
 <script>
-  import ColumnChart from '@/components/ColumnChart';
-  import LineChart from '@/components/LineChart';
-  import AreaChart from '@/components/AreaChart';
-  export default {
-    name: 'Charts',
-    components: {ColumnChart,LineChart,AreaChart}
-  }
+import ColumnChart from '@/components/ColumnChart'
+import LineChart from '@/components/LineChart'
+import AreaChart from '@/components/AreaChart'
+export default {
+  name: 'Charts',
+  components: {ColumnChart, LineChart, AreaChart}
+}
 </script>
 
 <style scoped>
