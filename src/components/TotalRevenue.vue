@@ -1,45 +1,56 @@
 <template>
   <div>
-    <b-row>
-      <b-card-group deck>
-        <b-card no-body>
-          <b-card-body>
-            <b-row>
-              <b-col cols="12">
-                <b-card-title>Some Numbers</b-card-title>
-              </b-col>
-              <b-col cols="12">
-                <b-card-title>Total Segment</b-card-title>
-              </b-col>
-            </b-row>
-            <b-row>
-              <b-col cols="12">
-                <b-card-title>Some Numbers</b-card-title>
-              </b-col>
-              <b-col cols="12">
-                <b-card-title>Total Bookings</b-card-title>
-              </b-col>
-            </b-row>
-          </b-card-body>
-        </b-card>
-        <b-card title="Card title" sub-title="Card subtitle">
-          <b-card-text>
-            Some quick example text to build on the <em>card title</em> and make up the bulk of the card's
-            content.
-          </b-card-text>
-        </b-card>
-      </b-card-group>
-    </b-row>
+    <SegmentCard />
+    <br />
+    <RevenueCard/>
+    <br />
   </div>
-
 </template>
 
 <script>
-  export default {
-    name: 'TotalRevenue'
+import RevenueCard from '@/components/RevenueCard'
+import SegmentCard from '@/components/SegmentCard'
+
+export default {
+  name: 'TotalRevenue',
+  components: {
+    RevenueCard, SegmentCard
   }
+}
 </script>
 
 <style scoped>
+
+  .segment-card{
+    background: #5C258D;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #4389A2, #5C258D);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #4389A2, #5C258D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  .segment-card-body{
+    /*background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url("../assets/aeroplane.svg");*/
+    background: url("../assets/aeroplane.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-blend-mode: hue;
+    background-size: 27%;
+    /*opacity:0.4;*/
+  }
+
+  .revenue-card-body{
+    /*background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url("../assets/aeroplane.svg");*/
+    background: url("../assets/money-bag.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-blend-mode: hue;
+    background-size: 27%;
+    /*opacity:0.4;*/
+  }
+
+  .revenue-card {
+    background: #C02425;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F0CB35, #C02425);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F0CB35, #C02425); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
 
 </style>
