@@ -1,49 +1,28 @@
 <template>
   <div id="app">
     <b-container fluid >
-      <Header />
+      <Header :userName="userName"/>
       <router-view/>
-        <!--<sidebar-menu :menu="menu" :theme="theme"/>-->
     </b-container>
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header'
-import { SidebarMenu } from 'vue-sidebar-menu'
 import '@fortawesome/fontawesome-free/css/all.css'
 
 export default {
   name: 'App',
   components: {
-    Header,
-    SidebarMenu
+    Header
   },
   data: function () {
     return {
-      menu: [
-        {
-          header: true,
-          title: 'Client Dashboard'
-        },
-        {
-          href: '/',
-          title: 'Dashboard',
-          icon: 'fa fa-tachometer-alt'
-        },
-        {
-          href: '/charts',
-          title: 'Charts',
-          icon: 'fa fa-chart-line'
-        },
-        {
-          href: '/tables',
-          title: 'Tables',
-          icon: 'fa fa-table'
-        }
-      ],
-      theme: 'white-theme'
+      userName: ''
     }
+  },
+  beforeUpdate () {
+    this.userName = localStorage.user
   }
 }
 </script>
