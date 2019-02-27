@@ -15,6 +15,7 @@
 
 <script>
 import { VueGoodTable } from 'vue-good-table'
+import { sumBy } from 'lodash'
 
 export default {
   name: 'ClientTable',
@@ -62,25 +63,13 @@ export default {
   },
   methods: {
     sumRevenue (rowObj) {
-      let sum = 0
-      for (let i = 0; i < rowObj.children.length; i++) {
-        sum += rowObj.children[i].revenue
-      }
-      return sum
+      return sumBy(rowObj.children, 'revenue')
     },
     sumBookings (rowObj) {
-      let sum = 0
-      for (let i = 0; i < rowObj.children.length; i++) {
-        sum += rowObj.children[i].bookings
-      }
-      return sum
+      return sumBy(rowObj.children, 'bookings')
     },
     sumSegments (rowObj) {
-      let sum = 0
-      for (let i = 0; i < rowObj.children.length; i++) {
-        sum += rowObj.children[i].segments
-      }
-      return sum
+      return sumBy(rowObj.children, 'segments')
     }
   }
 }
