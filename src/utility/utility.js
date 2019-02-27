@@ -1,5 +1,23 @@
+import axios from 'axios'
 
 export default class dashUtility {
+  static async getFlightSchedule () {
+    await axios.post('http://search.malindoair.com/FlightScheduleSupport.aspx/Get_FlightSchedule', {
+      pRequest: {
+        DepCity: 'KUL',
+        ArrCity: 'SIN',
+        SelDate: '2019-02-27',
+        BfDays: '0',
+        AfDays: '365'
+      }
+    }, {
+      Accept: 'application/json',
+      'Content-Type': 'application/json'
+    }).then(function (response) {
+      return response.data
+    }).catch(error => console.error(error))
+  }
+
   static getChartData (chartType) {
     switch (chartType) {
       case 'clientGraph': return {
