@@ -11,6 +11,7 @@
 
 <script>
 import { GChart } from 'vue-google-charts'
+import dashUtility from '@/utility/utility'
 
 export default {
   name: 'ComboChart',
@@ -25,22 +26,7 @@ export default {
         ['Bangkok Air', 1555, 299, 1555, 500],
         ['Batik Air', 660, 1120, 660, 1120]
       ],
-      chartOptions: {
-        chart: { title: 'Company Performance' },
-        colors: ['#1b9e77', '#d95f02', '#7570b3', '#EFC535'],
-        hAxis: {
-          textStyle: { color: 'black  ' }
-        },
-        vAxis: {
-          gridlines: {
-            color: 'transparent'
-          },
-          textStyle: { color: 'black' }
-        },
-        seriesType: 'bars',
-        backgroundColor: 'transparent',
-        legend: { position: 'right', textStyle: { color: 'black' } }
-      }
+      chartOptions: dashUtility.getChartData('clientGraph')
     }
   }
 }
