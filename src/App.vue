@@ -2,10 +2,8 @@
   <div id="app">
     <b-container>
       <Header />
-      <b-row>
-        <router-view/>
-        <sidebar-menu :menu="menu" :theme="theme"/>
-      </b-row>
+      <router-view/>
+        <!--<sidebar-menu :menu="menu" :theme="theme"/>-->
     </b-container>
   </div>
 </template>
@@ -39,9 +37,9 @@ export default {
           icon: 'fa fa-chart-line'
         },
         {
-          href: '/users',
-          title: 'Users',
-          icon: 'fa fa-users'
+          href: '/tables',
+          title: 'Tables',
+          icon: 'fa fa-table'
         }
       ],
       theme: 'white-theme'
