@@ -18,6 +18,7 @@
           <RevenueChart  />
         </b-col>
       </b-row>
+      <div slot="footer" class="text-right my-3"><small class="text-warning text-uppercase font-weight-normal">Last 30 days</small></div>
     </b-card-body>
   </b-card>
 </template>
