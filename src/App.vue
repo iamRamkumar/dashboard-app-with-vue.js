@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <b-container>
+    <b-container fluid >
       <Header />
       <router-view/>
         <!--<sidebar-menu :menu="menu" :theme="theme"/>-->
