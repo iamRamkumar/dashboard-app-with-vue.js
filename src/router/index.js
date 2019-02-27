@@ -5,6 +5,7 @@ import Charts from '@/pages/Charts/Charts'
 import UsersPage from '@/pages/UsersPage/UsersPage'
 import Table from '@/pages/Tables/Table'
 import Revenue from '@/pages/Revenue/Revenue'
+import LoginForm from '@/pages/Login/LoginForm'
 
 Vue.use(Router)
 
@@ -39,6 +40,11 @@ export default new Router({
       path: '/revenue',
       name: 'Revenue',
       component: Revenue
+    },
+    {
+      path: '/login',
+      name: 'LoginForm',
+      component: LoginForm
     }
   ]
 })
