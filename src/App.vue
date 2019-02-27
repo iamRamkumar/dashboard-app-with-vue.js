@@ -13,6 +13,8 @@
 <script>
 import Header from '@/components/Header'
 import { SidebarMenu } from 'vue-sidebar-menu'
+import '@fortawesome/fontawesome-free/css/all.css'
+
 export default {
   name: 'App',
   components: {
