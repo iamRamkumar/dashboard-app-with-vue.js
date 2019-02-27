@@ -25,6 +25,12 @@
                   </b-form-checkbox>
                 </b-form-checkbox-group>
               </b-form-group>
+              <p v-if="form.errors.length">
+                <b class="text-danger">Please correct the following error(s):</b>
+                <ul>
+                  <li class="text-danger" :key="error" v-for="error in form.errors">{{ error }}</li>
+                </ul>
+              </p>
               <b-button type="submit" variant="primary">Submit</b-button>
             </b-form>
           </b-card-body>
@@ -39,6 +45,7 @@ import Vue from 'vue'
 import BForm from 'bootstrap-vue/es/components/form/form'
 import BFormGroup from 'bootstrap-vue/es/components/form-group/form-group'
 import BFormInput from 'bootstrap-vue/es/components/form-input/form-input'
+import {USER} from '@/data/constants'
 
 Vue.component({
   'b-form': BForm,
@@ -51,6 +58,7 @@ export default {
   data: function () {
     return {
       form: {
+        errors: [],
         userName: '',
         password: '',
         checked: []
@@ -61,7 +69,13 @@ export default {
   methods: {
     onSubmit (evt) {
       evt.preventDefault()
-      alert(JSON.stringify(this.form))
+      this.form.errors = []
+      if (this.form.userName === USER.username && this.form.password === USER.password) {
+        localStorage.setItem('user', this.form.userName)
+        this.$router.push('/')
+      } else {
+        this.form.errors.push('UserName/Password Invalid')
+      }
     },
     onReset (evt) {
       evt.preventDefault()
