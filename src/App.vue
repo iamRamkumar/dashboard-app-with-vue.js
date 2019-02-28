@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <b-container fluid >
-      <Header :userName="userName"/>
+      <Header :userName="userName" :isLogin="userLoggedIn"/>
       <router-view/>
     </b-container>
   </div>
@@ -9,6 +9,7 @@
 
 <script>
 import Header from '@/components/Header'
+import dashUtility from '@/utility/utility'
 import '@fortawesome/fontawesome-free/css/all.css'
 
 export default {
@@ -18,11 +19,25 @@ export default {
   },
   data: function () {
     return {
-      userName: ''
+      userName: '',
+      userLoggedIn: false
     }
   },
+  mounted () {
+    this.userLoggedIn = dashUtility.isUserLoggedIn()
+    // if (dashUtility.isUserLoggedIn()) {
+    this.userName = dashUtility.isUserLoggedIn() ? dashUtility.getUser() : ''
+    // }
+  },
   beforeUpdate () {
-    this.userName = localStorage.user
+    this.userLoggedIn = dashUtility.isUserLoggedIn()
+    // if (dashUtility.isUserLoggedIn()) {
+    this.userName = dashUtility.isUserLoggedIn() ? dashUtility.getUser() : ''
+    // }
+  },
+  watch: {
+    userLoggedIn: () => dashUtility.isUserLoggedIn,
+    userName: () => dashUtility.getUser()
   }
 }
 </script>
