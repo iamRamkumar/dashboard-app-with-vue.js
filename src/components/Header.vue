@@ -1,5 +1,5 @@
 <template>
-  <div v-if="userName">
+  <div v-if="isLogin">
     <b-navbar toggleable="lg" type="dark" variant="info">
       <b-navbar-toggle target="nav_collapse" />
       <b-navbar-brand href="#">Project Name</b-navbar-brand>
@@ -23,7 +23,7 @@ import { faTachometerAlt, faChartLine, faTable, faUniversity, faUser } from '@fo
 export default {
   name: 'Header',
   components: {FontAwesomeIcon},
-  props: ['userName'],
+  props: ['userName', 'isLogin'],
   data: function () {
     return {
       dashboardIcon: faTachometerAlt,
