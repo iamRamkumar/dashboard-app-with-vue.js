@@ -6,6 +6,7 @@ import UsersPage from '@/pages/UsersPage/UsersPage'
 import Table from '@/pages/Tables/Table'
 import Revenue from '@/pages/Revenue/Revenue'
 import LoginForm from '@/pages/Login/LoginForm'
+import dashUtility from '@/utility/utility'
 
 Vue.use(Router)
 
@@ -55,10 +56,14 @@ router.beforeEach((to, from, next) => {
   // redirect to login page if not logged in and trying to access a restricted page
   const publicPages = ['/login']
   const authRequired = !publicPages.includes(to.path)
-  const loggedIn = localStorage.getItem('user')
+  const loggedIn = dashUtility.isUserLoggedIn()
 
   if (authRequired && !loggedIn) {
     return next('/login')
+  }
+
+  if (to.path === '/login' && loggedIn) {
+    return next('/dashboard')
   }
 
   next()
