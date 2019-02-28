@@ -4,7 +4,7 @@
       <font-awesome-icon :icon="planeDepart" fixed-width size="6x" pull="right" transform="shrink-6" :style="{ color: '#81A2B8', opacity: 0.6 }"></font-awesome-icon>
       <b-row align-v="start">
         <div class="mx-4">
-          <b-card-title>Some Numbers</b-card-title>
+          <b-card-title>{{segments}}</b-card-title>
         </div>
         <div class="w-100"></div>
         <div class="mx-4">
@@ -14,7 +14,7 @@
       <br />
       <b-row align-v="start">
         <div class="mx-4">
-          <b-card-title>Some Numbers</b-card-title>
+          <b-card-title>{{bookings}}</b-card-title>
         </div>
         <div class="w-100"></div>
         <div class="mx-4">
@@ -32,6 +32,7 @@ import { faPlaneDeparture } from '@fortawesome/free-solid-svg-icons'
 export default {
   name: 'SegmentCard',
   components: {FontAwesomeIcon},
+  props: ['segments', 'bookings'],
   data: function () {
     return {
       planeDepart: faPlaneDeparture

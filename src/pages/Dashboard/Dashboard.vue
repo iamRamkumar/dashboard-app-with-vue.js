@@ -5,7 +5,7 @@
         <!--<div class="w-100"></div>-->
         <b-row>
           <b-col cols="12" sm="6" md="6">
-            <TotalRevenue />
+            <TotalRevenue :revenue="cardDetails" />
           </b-col>
           <br/>
           <b-col cols="12" sm="6"  md="6">
@@ -32,10 +32,25 @@ import ComboChart from '@/components/ComboChart'
 import TotalRevenue from '@/components/TotalRevenue'
 import ClientTable from '@/components/ClientTable'
 import Users from '@/components/Users'
+import {SAMPLEDATA} from '@/data/constants'
 
 export default {
   name: 'Dashboard',
-  components: { Header, SideNav, ColumnChart, Users, LineChart, AreaChart, ComboChart, TotalRevenue, ClientTable }
+  components: { Header, SideNav, ColumnChart, Users, LineChart, AreaChart, ComboChart, TotalRevenue, ClientTable },
+  data: function () {
+    return {
+      cardDetails: {
+        totalSegments: null,
+        totalBookings: null,
+        totalRevenue: null
+      }
+    }
+  },
+  mounted () {
+    this.cardDetails.totalSegments = SAMPLEDATA.dashboarddata.totalsegments
+    this.cardDetails.totalBookings = SAMPLEDATA.dashboarddata.totalbookings
+    this.cardDetails.totalRevenue = SAMPLEDATA.dashboarddata.totalrevenueamt
+  }
 }
 </script>
 

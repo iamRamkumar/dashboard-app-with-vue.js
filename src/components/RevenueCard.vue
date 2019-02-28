@@ -7,7 +7,7 @@
             <font-awesome-icon :icon="bank" fixed-width size="6x" transform="shrink-6" :style="{ color: '#81A2B8', opacity: 0.6 }"></font-awesome-icon>
           </b-col>
           <b-card-title>
-            <font-awesome-icon :icon="dollar"></font-awesome-icon> some numbers
+            <font-awesome-icon :icon="dollar"></font-awesome-icon> {{revenue}}
           </b-card-title>
           <div class="w-100"></div>
           <b-card-title>
@@ -30,6 +30,7 @@ import RevenueChart from '@/components/RevenueChart'
 export default {
   name: 'RevenueCard',
   components: {FontAwesomeIcon, RevenueChart},
+  props: ['revenue'],
   data: function () {
     return {
       dollar: faDollarSign,

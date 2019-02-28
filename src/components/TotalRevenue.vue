@@ -1,8 +1,8 @@
 <template>
   <div>
-    <SegmentCard />
+    <SegmentCard :segments="revenue.totalSegments" :bookings="revenue.totalBookings"/>
     <br />
-    <RevenueCard/>
+    <RevenueCard :revenue="revenue.totalRevenue" />
     <br />
   </div>
 </template>
@@ -15,7 +15,8 @@ export default {
   name: 'TotalRevenue',
   components: {
     RevenueCard, SegmentCard
-  }
+  },
+  props: ['revenue']
 }
 </script>
 
