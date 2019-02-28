@@ -1,6 +1,14 @@
 import axios from 'axios'
 
 export default class dashUtility {
+  static isUserLoggedIn () {
+    return !(localStorage.getItem('user') !== '' && dashUtility.getUser() === null)
+  }
+
+  static getUser () {
+    return localStorage.getItem('user')
+  }
+
   static async getFlightSchedule () {
     await axios.post('http://search.malindoair.com/FlightScheduleSupport.aspx/Get_FlightSchedule', {
       pRequest: {
