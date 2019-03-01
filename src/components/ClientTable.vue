@@ -25,7 +25,8 @@ export default {
       columns: [
         {
           label: 'Client',
-          field: 'client'
+          field: 'client',
+          headerField: this.clientHeader
         },
         {
           label: 'Segments',
@@ -70,6 +71,9 @@ export default {
     },
     sumSegments (rowObj) {
       return sumBy(rowObj.children, 'segments')
+    },
+    clientHeader (rowObj) {
+      return 'Total'
     }
   }
 }
