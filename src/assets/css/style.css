@@ -1,0 +1,217 @@
+@charset "utf-8";
+/* CSS Document */
+html, body { width:100%; height:100%; }
+body {
+    font-size: 14px;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 400;
+	background-color:#0d131e;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#333f68+0,222a44+100 */
+background: rgb(51,63,104); /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover, rgba(51,63,104,1) 0%, rgba(34,42,68,1) 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover, rgba(51,63,104,1) 0%,rgba(34,42,68,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center, rgba(51,63,104,1) 0%,rgba(34,42,68,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333f68', endColorstr='#222a44',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.content { padding:35px; }
+.content .box { 
+	width:100%;
+	padding:35px;
+	position:relative;
+	display:flex;
+	color:#fff;
+	height:265px;
+	flex-direction:column;
+	text-transform:uppercase;
+	-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+	-webkit-box-shadow: 5px 3px 10px 0px rgba(50, 50, 50, 0.49);
+	-moz-box-shadow:    5px 3px 10px 0px rgba(50, 50, 50, 0.49);
+	box-shadow:         5px 3px 10px 0px rgba(50, 50, 50, 0.49); 
+	justify-content:space-between;
+}
+.content .box h3 { font-size:51px; line-height:45px; font-weight:700; margin-bottom:10px;  }
+.content .box h5 { font-size:26px; line-height:25px; font-weight:500; margin-bottom:0px;  }
+.content .box.seg_booking_bg
+{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8b1ff6+0,2383f1+100 */
+background: rgb(139,31,246); /* Old browsers */
+background: -moz-linear-gradient(-45deg, rgba(139,31,246,1) 0%, rgba(35,131,241,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, rgba(139,31,246,1) 0%,rgba(35,131,241,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, rgba(139,31,246,1) 0%,rgba(35,131,241,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8b1ff6', endColorstr='#2383f1',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.seg_booking_bg:before {
+	content: "\e901";
+    position: absolute;
+    right: 16px;
+    top: 20px;
+    font-size: 140px;
+    font-family: 'icomoon' !important;
+    speak: none;
+	opacity:0.1;
+	color:#000;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+}
+
+.content .box.revenue_bg
+{
+	color:#000;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e7c256+0,e9691d+100 */
+background: rgb(231,194,86); /* Old browsers */
+background: -moz-linear-gradient(-45deg, rgba(231,194,86,1) 0%, rgba(233,105,29,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, rgba(231,194,86,1) 0%,rgba(233,105,29,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, rgba(231,194,86,1) 0%,rgba(233,105,29,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7c256', endColorstr='#e9691d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.revenue_bg:before {
+	content: "\e900";
+    position: absolute;
+    right: 16px;
+    top: 20px;
+    font-size: 110px;
+    font-family: 'icomoon' !important;
+    speak: none;
+	opacity:0.1;
+	color:#000;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+}
+.content .box img { max-width:100%; }
+
+.days_txt {
+	position: relative;
+    bottom: -20px;
+    right: -10px;
+    font-size: 16px;
+    color: #000;
+    opacity: 0.5;
+    text-align: right;
+    width: 100%; }
+
+.table_lists { color:#fff; font-size:20px; border:none; }
+.table_lists ul { position:relative; display:flex; flex-direction:row; flex:1; }
+.table_lists ul li { display:flex; flex-direction:column; flex:1; font-size:20px; line-height:20px; font-weight:400; text-transform:uppercase; padding:13px 0px; }
+.table_lists ul:first-child li { padding-bottom:13px; padding-top:0px; opacity:0.2;  }
+.table_lists ul li:first-child { color:#1d9dff; }
+.table_lists ul:last-child li { font-weight:700; }
+.table_lists ul:last-child li:first-child  {  color:#e7c256; }
+.table_lists ul:after { 
+content:'';
+position:absolute;
+left:0px;
+bottom:0px;
+width:100%; height:2px; /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3d395a+0,63438d+38,0b71ac+100 */
+background: rgb(61,57,90); /* Old browsers */
+background: -moz-linear-gradient(left, rgba(61,57,90,1) 0%, rgba(99,67,141,1) 38%, rgba(11,113,172,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, rgba(61,57,90,1) 0%,rgba(99,67,141,1) 38%,rgba(11,113,172,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, rgba(61,57,90,1) 0%,rgba(99,67,141,1) 38%,rgba(11,113,172,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3d395a', endColorstr='#0b71ac',GradientType=1 ); /* IE6-9 */ }
+
+.chart_bg { position:relative; width:100%; margin-top:50px; padding-bottom:20px; }
+.chart_bg ul:before { content:''; height:2px; width:100%; background-color:#34416d; position:absolute; bottom:42px; }
+.chart_bg ul { display:flex; flex-direction:row; position:relative; }
+.chart_bg ul li { display:flex; flex-direction:column; text-align:center; margin:0px 45px; }
+.chart_bg ul li h5 { margin:0px; color:#428eff; font-size:20px; text-transform:uppercase; margin-top:20px;}
+
+@media (min-width: 1200px) and (max-width: 1366px) {
+	.content .box { padding:25px; }
+	.content .box h3 { font-size:38px; line-height:38px; }
+	.content .box h5 { font-size:20px; line-height: 22px; }
+	.table_lists ul li { padding:11px 0px; font-size:16px; line-height:18px; }
+	.chart_bg ul li img { max-width:100%; }
+	.days_txt { bottom:0px; right:0px; }
+	.chart_bg { margin-top:50px; padding-bottom:50px; }
+}
+
+@media (max-width: 1366px) {
+	.content .box { max-width:400px; margin:auto; }
+	.table_lists { margin-top:50px }
+	.chart_bg { margin-top:20px; padding-bottom:50px; }
+	.chart_bg ul li img { max-width:100%; }
+	
+	.content .box h3 { font-size:42px; line-height:42px; }
+	.content .box h5 { font-size:24px; line-height: 24px; }
+	.chart_bg ul:before { bottom:37px; }
+	.table_lists ul li { padding:15px 0px; font-size:18px; line-height:20px; }
+	.chart_bg ul li h5 { font-size: 16px; }
+}
+@media (max-width: 991px) {
+.content { padding:15px; }
+.content .box h3 { font-size:36px; line-height:36px; }
+.content .box h5 { font-size:19px; line-height: 19px; }
+.table_lists ul li { padding:12px 0px; font-size:16px; line-height:20px; }
+.chart_bg ul li { margin:0px 25px; }
+.chart_bg ul li h5 { font-size: 13px; }
+.chart_bg ul:before { bottom:35px; }
+}
+
+@media (max-width: 767px) {
+.content { padding:10px; }
+.content .box { height:235px; padding:25px; margin-bottom:20px; }
+.table_lists { margin-top:0px; }
+.chart_bg ul li {
+    margin: 0px 15px;
+}
+.table_bg { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; -ms-overflow-style: -ms-autohiding-scrollbar;}
+.table_lists ul li { padding:9px 0px; font-size:13px; line-height:20px; }
+.content .box.seg_booking_bg { flex-direction:row; height:auto; }
+.content .box.seg_booking_bg:before { opacity:0.05; }
+.content .box { height:auto; margin-bottom:10px; padding:15px; }
+.content .box h3 {
+    font-size: 28px;
+    line-height: 30px;
+}
+.content .box h5 {
+    font-size: 16px;
+    line-height: 16px;
+}
+.days_txt { font-size:12px; bottom:-10px; right:-10px; }
+.chart_bg { padding-bottom:10px; }
+}
+
+@media (max-width: 564px) {
+.chart_bg ul li {
+    margin: 0px 0px;
+    padding: 0px 8px;
+}
+.table_bg .table_lists { width: 500px; }
+.chart_bg ul:before { bottom:42px; }
+.chart_bg ul li h5 {
+    font-size: 11px;
+	margin-top:9px;
+	min-height:35px;
+}
+}
+
+@media (max-width: 480px) {
+.content .box h5 {
+    font-size: 13px;
+    line-height: 13px;
+}
+.content .box h3 {
+    font-size: 20px;
+    line-height: 20px;
+}
+}
