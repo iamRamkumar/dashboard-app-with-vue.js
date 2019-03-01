@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <b-container fluid >
-      <Header :userName="userName" :isLogin="userLoggedIn"/>
+      <!--<Header :userName="userName" :isLogin="userLoggedIn"/>-->
       <router-view/>
     </b-container>
   </div>
@@ -44,13 +44,13 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  /*background: #2c3e50;*/
-  /*color: #fff;*/
-  color: #2c3e50;
+  /*font-family: 'Avenir', Helvetica, Arial, sans-serif;*/
+  /*-webkit-font-smoothing: antialiased;*/
+  /*-moz-osx-font-smoothing: grayscale;*/
+  /*text-align: center;*/
+  /*!*background: #2c3e50;*!*/
+  /*!*color: #fff;*!*/
+  /*color: #2c3e50;*/
 }
 #app .container {
   max-width: 90vw;
