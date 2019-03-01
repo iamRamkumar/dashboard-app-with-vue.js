@@ -13,6 +13,9 @@ import 'vue-sidebar-menu/dist/vue-sidebar-menu.css'
 import App from './App'
 import router from './router'
 
+import '@/assets/css/style.css'
+import '@/assets/css/travelicon.css'
+
 Vue.use(BootstrapVue)
 Vue.use(VueSidebarMenu)
 
